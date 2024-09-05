@@ -1,0 +1,261 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(0, 100%, 68%);
+    --very-dark-blue: hsl(230, 29%, 20%);
+    --dark-grayish-blue: hsl(230, 11%, 40%);
+    --grayish-blue: hsl(231, 7%, 65%);
+    --Light-grayish-blue: hsl(207, 33%, 95%);
+}
+ 
+.small-font {
+    font-size: 16px;
+}
+
+.one-line-text {
+    white-space: nowrap;
+
+}
+.w-90 {
+    width: 90%;
+}
+
+h1,h2,h3 {
+    font-weight: bold;
+}
+
+.barlow-condensed-thin {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-condensed-extralight {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-condensed-light {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-condensed-regular {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-condensed-medium {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-condensed-semibold {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-condensed-bold {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+ 
+
+/* General Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Align logo and hamburger toggle button side by side */
+    align-items: center; /* Vertically center the items */
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 8px;
+    position: relative;
+}
+
+.navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-header h1 {
+    font-size: 24px;
+    color: white;
+    margin-right: auto; /* Keeps the title on the left */
+}
+
+/* Hamburger menu button */
+.navbar-toggle {
+    font-size: 30px;
+    color: var(--dark-grayish-blue);
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hidden on desktop */
+}
+
+/* Navbar menu list */
+.navbar-menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu li a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Styling the links in the navbar */
+.navbar-menu a {
+    text-decoration: none; /* Remove underline initially */
+    color: white; /* Default text color */
+    padding: 10px;
+    font-size: 16px;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Transition for smooth color change */
+}
+
+/* Hover effect: underline and color change */
+.navbar-menu a:hover {
+    text-decoration: underline var(--dark-grayish-blue); /* Underline on hover */
+    color: var(--Light-grayish-blue); /* Change to your desired hover color */
+}
+
+
+/* Hero */
+.hero {
+    overflow: hidden;
+}
+
+.hero-img {
+    margin-top: 56px;
+    width: 916px;
+    height: 455px;
+}
+
+/* Mono */
+
+.mono  {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 16px;
+    width: 60%;
+}
+
+.mono-body {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 87px;
+    /* padding: 8px; */
+}
+
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 120px;
+  }
+  
+
+
+
+
+.pill {
+    padding: .4rem .7rem;
+    background: var(--very-dark-blue);
+    border-radius: 24px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.schedule-btn {
+    background: var(--Red);
+    padding: 10px 1px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    height: 48px;
+    width: 184px;
+    font-size: 14px;
+    text-align: center;
+}
+ 
+
+/* Mobile styling */
+@media (max-width: 442px) {
+    .navbar {
+        flex-direction: row;
+        padding: 10px 15px;
+    }
+
+    .main-container {
+        display: block;
+    }
+
+    /* Ensure the logo and the hamburger icon are side by side */
+    .navbar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar-toggle {
+        display: block; /* Show the hamburger button */
+        margin-left: auto;
+    }
+
+    .navbar-menu {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .navbar-menu.show {
+        display: flex; /* Show the menu when toggle is clicked */
+    }
+
+    .navbar-menu li {
+        width: 100%; /* Full width for each menu item */
+        text-align: center;
+    }
+
+    .hero-img {
+    margin-top: 56px;
+    width: 500px;
+    height: 239px;
+}
+.mono  {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 16px;
+    width: 100%;
+}
+}
